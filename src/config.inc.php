@@ -741,21 +741,6 @@ define('GICON_FOLDEROPEN', 10);
 define('GICON_FOLDER', 11);
 define('GICON_TEXTIMPORTANT', 12);
 
-if (!class_exists('\Kint')) {
-    /**
-     * Class that mocks Kint
-     * (will use this when dev dependencies are not installed).
-     */
-    class Kint
-    {
-        public static $enabled_mode = true;
-
-        public static function dump()
-        {
-        }
-    }
-}
-\Kint::$enabled_mode = DEBUGMODE;
 
 if (!function_exists('is_countable')) {
     function is_countable($c)
